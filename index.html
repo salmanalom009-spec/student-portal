@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T@ZUL'S CARE - Educational Portal</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo-section">
+                <img src="images/logo.png" alt="T@ZUL'S CARE Logo" class="login-logo" id="loginLogo">
+                <h1>T@ZUL'S CARE</h1>
+                <p class="tagline">Educational Excellence Portal</p>
+            </div>
+
+            <div class="login-tabs">
+                <button class="tab-button active" data-tab="admin-login">Admin Login</button>
+                <button class="tab-button" data-tab="student-login">Student Login</button>
+            </div>
+
+            <!-- Admin Login Form -->
+            <form id="adminLoginForm" class="login-form active-tab">
+                <div class="form-group">
+                    <label for="adminUsername">
+                        <i class="fas fa-user"></i> Admin Name
+                    </label>
+                    <input 
+                        type="text" 
+                        id="adminUsername" 
+                        name="adminUsername" 
+                        placeholder="Enter admin name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="adminPassword">
+                        <i class="fas fa-lock"></i> Admin Password
+                    </label>
+                    <div class="password-wrapper">
+                        <input 
+                            type="password" 
+                            id="adminPassword" 
+                            name="adminPassword" 
+                            placeholder="Enter password"
+                            required
+                        >
+                        <span class="toggle-password" onclick="togglePassword('adminPassword')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Login as Admin
+                </button>
+            </form>
+
+            <!-- Student Login Form -->
+            <form id="studentLoginForm" class="login-form">
+                <div class="form-group">
+                    <label for="studentID">
+                        <i class="fas fa-id-card"></i> Student ID
+                    </label>
+                    <input 
+                        type="text" 
+                        id="studentID" 
+                        name="studentID" 
+                        placeholder="Enter your Student ID"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="studentPassword">
+                        <i class="fas fa-lock"></i> Password
+                    </label>
+                    <div class="password-wrapper">
+                        <input 
+                            type="password" 
+                            id="studentPassword" 
+                            name="studentPassword" 
+                            placeholder="Enter password"
+                            required
+                        >
+                        <span class="toggle-password" onclick="togglePassword('studentPassword')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Login as Student
+                </button>
+            </form>
+
+            <div class="login-footer">
+                <p>© 2024 T@ZUL'S CARE. All rights reserved.</p>
+            </div>
+        </div>
+
+        <div class="login-info">
+            <div class="info-card">
+                <i class="fas fa-graduation-cap"></i>
+                <h3>Student Portal</h3>
+                <p>View your grades, attendance, and exam results</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Performance Tracking</h3>
+                <p>Monitor your academic progress</p>
+            </div>
+            <div class="info-card">
+                <i class="fas fa-lock"></i>
+                <h3>Secure Access</h3>
+                <p>Your data is protected with secure login</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/login.js"></script>
+</body>
+</html>
